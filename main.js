@@ -207,17 +207,19 @@ function animate() {
     },1200);
     window.setTimeout(function(){
         enemy.enemyAttack1()
-        enemyEffect.position.x = 300
+        enemyEffect.position.x = 150
         enemyEffect.position.y = 300
         enemyEffect.fireLaunch()
-        player.switchSprite('takeHit')
-        },1600);
+        },1400);
     window.setTimeout(function(){
         enemy.switchSprite('idle')
-        enemyEffect.position.x = 160
+        player.switchSprite('takeHit')
         enemyEffect.switchSprite('idle')
+        enemyEffect.position.x = 160
+        },1800);
+    window.setTimeout(function(){
         player.switchSprite('idle')
-        },2200)
+        },2000)
     })
     // button 3
     button3.addEventListener('click', (event)=>{
