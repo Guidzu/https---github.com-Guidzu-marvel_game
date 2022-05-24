@@ -140,6 +140,9 @@ class Fighter extends Sprite{
         fireEffect() {
             this.switchSprite('firePillar')
         }
+        fireLaunch() {
+            this.switchSprite('fireBall')
+        }
     
         switchSprite(sprite) {
     
@@ -185,7 +188,14 @@ class Fighter extends Sprite{
                     this.framesMax = this.sprites.firePillar.framesMax
                     this.framesCurrent = 0
                 }
-                break;    
+                break;
+            case 'fireBall':
+                if (this.image !== this.sprites.fireBall.image) {
+                    this.image = this.sprites.fireBall.image
+                    this.framesMax = this.sprites.fireBall.framesMax
+                    this.framesCurrent = 0
+                }
+                    break;        
             case 'takeHit':
                 if (this.image !== this.sprites.takeHit.image) {
                     this.image = this.sprites.takeHit.image

@@ -47,6 +47,10 @@ const enemyEffect = new Fighter({
             imageSrc: './assets/fireEffect/Fire-Pillar.png',
             framesMax: 18,
         },
+        fireBall: {
+            imageSrc: './assets/fireEffect/Fire_Ball_to_Left.png',
+            framesMax: 4,
+        },
     }
 
 })
@@ -154,14 +158,6 @@ const enemy = new Fighter ({
             imageSrc: './assets/Dormammu/Take Hit.png',
             framesMax: 2,
         }
-    },
-    attackBox: {
-        offset: {
-            x:-130,
-            y:50
-        },
-        width: 150,
-        height:50
     }
 })
 
@@ -211,13 +207,17 @@ function animate() {
     },1200);
     window.setTimeout(function(){
         enemy.enemyAttack1()
-        enemyEffect.fireBall()
+        enemyEffect.position.x = 300
+        enemyEffect.position.y = 300
+        enemyEffect.fireLaunch()
         player.switchSprite('takeHit')
         },1600);
     window.setTimeout(function(){
         enemy.switchSprite('idle')
+        enemyEffect.position.x = 160
+        enemyEffect.switchSprite('idle')
         player.switchSprite('idle')
-        },1800)
+        },2200)
     })
     // button 3
     button3.addEventListener('click', (event)=>{
