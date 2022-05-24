@@ -1,4 +1,22 @@
 
 #button1:hover{
     border: 2px solid yellow;
+    transform:scale(1.1);
+}
+
+#button1:hover .textButton1{
+    border: 2px solid yellow;
+    visibility: visible;
+}
+.textButton1 {
+    position:absolute;
+    top:-90px;
+    left: 0;
+    bottom:0px;
+    right:0;
+    visibility: hidden;
+    background-color:grey;
+    color:white;
+    width: 90px;
+    height:70px;
 }
