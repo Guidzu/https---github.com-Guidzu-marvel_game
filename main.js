@@ -209,6 +209,15 @@ function animate() {
         player.position.x = 196
         player.switchSprite('idle')
     },1200);
+    window.setTimeout(function(){
+        enemy.enemyAttack1()
+        enemyEffect.fireBall()
+        player.switchSprite('takeHit')
+        },1600);
+    window.setTimeout(function(){
+        enemy.switchSprite('idle')
+        player.switchSprite('idle')
+        },1800)
     })
     // button 3
     button3.addEventListener('click', (event)=>{

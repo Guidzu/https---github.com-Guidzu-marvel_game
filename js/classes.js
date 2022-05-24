@@ -111,6 +111,7 @@ class Fighter extends Sprite{
             }
         attack2() {
             this.switchSprite('action2')
+            this.attack = true
             }
         attack3() {
             this.switchSprite('action3')
@@ -128,6 +129,10 @@ class Fighter extends Sprite{
             // document.querySelector('#displayText').innerHTML = 'VICTORY'
             // }
         }
+        enemyAttack1() {
+            this.attack = true
+            this.switchSprite('action1')
+         }
         enemyAttack2() {
            this.attack = true
            this.switchSprite('action2')
