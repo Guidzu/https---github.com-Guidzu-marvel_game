@@ -23,7 +23,6 @@ const background = new Sprite({
 })
 
 const enemyEffect = new Fighter({
-    framesHold: 1,
     position: {
         x: 160,
         y: 270
@@ -56,6 +55,10 @@ const enemyEffect = new Fighter({
         darkProjection: {
             imageSrc: './assets/Effect/Dark_Projection.png',
             framesMax: 11,
+        },
+        cursedRings: {
+            imageSrc: './assets/Effect/ringCurse.png',
+            framesMax: 12,
         },
     }
 
@@ -156,10 +159,6 @@ const enemy = new Fighter ({
             imageSrc: './assets/Dormammu/attack3.png',
             framesMax: 5,
         },
-        action4: {
-            imageSrc: './assets/Dormammu/attack2.png',
-            framesMax: 6,
-        },
         takeHit: {
             imageSrc: './assets/Dormammu/Take Hit.png',
             framesMax: 2,
@@ -229,7 +228,7 @@ function animate() {
         player.switchSprite('takeHit')
         enemyEffect.switchSprite('idle')
         enemyEffect.position.x = 160
-        enemyEffect.position.x = 270
+        enemyEffect.position.y = 270
         },1800);
     window.setTimeout(function(){
         player.switchSprite('idle')
@@ -251,16 +250,14 @@ function animate() {
         enemy.enemyAttack2()
         enemyEffect.position.x = 130
         enemyEffect.darkProjections()
-        },1400);
-    window.setTimeout(function(){
-        enemy.switchSprite('idle')
         player.switchSprite('takeHit')
+        },1200);
+    window.setTimeout(function(){
+        player.switchSprite('idle')
+        enemy.switchSprite('idle')
         enemyEffect.position.x = 160
         enemyEffect.switchSprite('idle')
         },1800);
-    window.setTimeout(function(){
-        player.switchSprite('idle')
-        },2000)
     })
     // button 4
     button4.addEventListener('click', (event)=>{
@@ -272,9 +269,22 @@ function animate() {
         enemy.switchSprite('idle')
         player.switchSprite('idle')
     },600);
+    window.setTimeout(function(){
+        enemy.enemyAttack3()
+        enemyEffect.position.x = 190
+        enemyEffect.position.y = 320
+        enemyEffect.darkRings()
+        player.switchSprite('takeHit')
+        },1000);
+    window.setTimeout(function(){
+        player.switchSprite('idle')
+        enemy.switchSprite('idle')
+        enemyEffect.position.x = 160
+        enemyEffect.position.y = 270
+        enemyEffect.switchSprite('idle')
+        },1600);
     })
     if (player.attack) {
-        buttons.classList.add("hideButtons")
         enemy.hit10()
         player.attack = false 
         document.querySelector('#enemyHealth').style.width = enemy.health + '%'

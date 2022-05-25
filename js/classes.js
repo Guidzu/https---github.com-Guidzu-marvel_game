@@ -137,6 +137,10 @@ class Fighter extends Sprite{
            this.attack = true
            this.switchSprite('action2')
         }
+        enemyAttack3() {
+            this.attack = true
+            this.switchSprite('action3')
+         }
         fireEffect() {
             this.switchSprite('firePillar')
         }
@@ -146,7 +150,9 @@ class Fighter extends Sprite{
         darkProjections() {
             this.switchSprite('darkProjection')
         }
-    
+        darkRings() {
+            this.switchSprite('cursedRings')
+        }
         switchSprite(sprite) {
     
         switch (sprite) {
@@ -206,7 +212,13 @@ class Fighter extends Sprite{
                     this.framesCurrent = 0
                 }
                 break;
-                    break;        
+            case 'cursedRings':
+                if (this.image !== this.sprites.cursedRings.image) {
+                    this.image = this.sprites.cursedRings.image
+                    this.framesMax = this.sprites.cursedRings.framesMax
+                    this.framesCurrent = 0
+                }
+                break;  
             case 'takeHit':
                 if (this.image !== this.sprites.takeHit.image) {
                     this.image = this.sprites.takeHit.image
