@@ -33,7 +33,7 @@ const enemyEffect = new Fighter({
         x: 160,
         y:95
     },
-    imageSrc: './assets/fireEffect/fireEffect-idle.png',
+    imageSrc: './assets/Effect/fireEffect-idle.png',
     scale: 1,
     framesMax: 4,
     offset: {
@@ -42,16 +42,20 @@ const enemyEffect = new Fighter({
     },
     sprites: {
         idle: {
-            imageSrc: './assets/fireEffect/fireEffect-idle.png',
+            imageSrc: './assets/Effect/fireEffect-idle.png',
             framesMax: 1,
         },
         firePillar: {
-            imageSrc: './assets/fireEffect/Fire-Pillar.png',
+            imageSrc: './assets/Effect/Fire-Pillar.png',
             framesMax: 18,
         },
         fireBall: {
-            imageSrc: './assets/fireEffect/Fire_Ball_to_Left.png',
+            imageSrc: './assets/Effect/Fire_Ball_to_Left.png',
             framesMax: 4,
+        },
+        darkProjection: {
+            imageSrc: './assets/Effect/Dark_Projection.png',
+            framesMax: 11,
         },
     }
 
@@ -173,7 +177,14 @@ function animate() {
     enemyEffect.update()
     
     // player actions
-   
+
+    //preventing the player to spam the action script
+    buttons.addEventListener('click', (event)=>{
+        buttons.classList.add("hideButtons")
+    window.setTimeout(function(){
+        buttons.classList.remove("hideButtons")
+    },2000);
+    })
     // button1
     button1.addEventListener('click', (event)=>{
         player.position.x = 550
@@ -218,6 +229,7 @@ function animate() {
         player.switchSprite('takeHit')
         enemyEffect.switchSprite('idle')
         enemyEffect.position.x = 160
+        enemyEffect.position.x = 270
         },1800);
     window.setTimeout(function(){
         player.switchSprite('idle')
@@ -235,6 +247,20 @@ function animate() {
         enemy.switchSprite('idle')
         player.switchSprite('idle')
     },700);
+    window.setTimeout(function(){
+        enemy.enemyAttack2()
+        enemyEffect.position.x = 130
+        enemyEffect.darkProjections()
+        },1400);
+    window.setTimeout(function(){
+        enemy.switchSprite('idle')
+        player.switchSprite('takeHit')
+        enemyEffect.position.x = 160
+        enemyEffect.switchSprite('idle')
+        },1800);
+    window.setTimeout(function(){
+        player.switchSprite('idle')
+        },2000)
     })
     // button 4
     button4.addEventListener('click', (event)=>{
@@ -247,29 +273,19 @@ function animate() {
         player.switchSprite('idle')
     },600);
     })
-    buttons.addEventListener('click', (event)=>{
-        buttons.classList.add("hideButtons")
-    window.setTimeout(function(){
-        buttons.classList.remove("hideButtons")
-    },2000);
-    })
     if (player.attack) {
         buttons.classList.add("hideButtons")
-        enemy.takeHit()
+        enemy.hit10()
         player.attack = false 
         document.querySelector('#enemyHealth').style.width = enemy.health + '%'
      }
      if (enemy.attack) {
-        player.takeHit()
+        player.hit10()
         enemy.attack = false 
         document.querySelector('#playerHealth').style.width = enemy.health + '%'
      }
      
   }
-
- //detect when player attack and stop double click attack
- 
-
 //  //if player misses
 //  if (player.isAttacking && player.framesCurrent ===4) {
 //     player.isAttacking = false

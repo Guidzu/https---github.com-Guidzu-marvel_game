@@ -120,7 +120,7 @@ class Fighter extends Sprite{
             this.switchSprite('action4')
                 }
     
-        takeHit() {
+        hit10() {
             this.health -= 10
             // // if (this.health <= 0){
             // // this.switchSprite('death')
@@ -142,6 +142,9 @@ class Fighter extends Sprite{
         }
         fireLaunch() {
             this.switchSprite('fireBall')
+        }
+        darkProjections() {
+            this.switchSprite('darkProjection')
         }
     
         switchSprite(sprite) {
@@ -195,6 +198,14 @@ class Fighter extends Sprite{
                     this.framesMax = this.sprites.fireBall.framesMax
                     this.framesCurrent = 0
                 }
+                break;
+            case 'darkProjection':
+                if (this.image !== this.sprites.darkProjection.image) {
+                    this.image = this.sprites.darkProjection.image
+                    this.framesMax = this.sprites.darkProjection.framesMax
+                    this.framesCurrent = 0
+                }
+                break;
                     break;        
             case 'takeHit':
                 if (this.image !== this.sprites.takeHit.image) {
