@@ -1,6 +1,8 @@
 const canvas = document.querySelector("canvas")
 const c = canvas.getContext('2d')
 
+const buttons = document.querySelector('#buttons')
+
 const button1 = document.querySelector('#button1')
 const button2 = document.querySelector('#button2')
 const button3 = document.querySelector('#button3')
@@ -245,7 +247,14 @@ function animate() {
         player.switchSprite('idle')
     },600);
     })
+    buttons.addEventListener('click', (event)=>{
+        buttons.classList.add("hideButtons")
+    window.setTimeout(function(){
+        buttons.classList.remove("hideButtons")
+    },2000);
+    })
     if (player.attack) {
+        buttons.classList.add("hideButtons")
         enemy.takeHit()
         player.attack = false 
         document.querySelector('#enemyHealth').style.width = enemy.health + '%'
@@ -255,9 +264,10 @@ function animate() {
         enemy.attack = false 
         document.querySelector('#playerHealth').style.width = enemy.health + '%'
      }
+     
   }
 
- //detect when player attack
+ //detect when player attack and stop double click attack
  
 
 //  //if player misses

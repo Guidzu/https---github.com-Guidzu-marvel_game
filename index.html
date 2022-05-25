@@ -12,7 +12,7 @@
     </div>
       <canvas></canvas>
       <!-- div for action bar -->
-      <div style="position: absolute;
+      <div id="buttons" style="position: absolute;
       display: flex;
       width: 100%;
       align-items: center;
@@ -20,11 +20,21 @@
       bottom:160;
       ">
   <!--buttons of action bar -->
-      <div id="button1" ><img src="./assets/Quicksilver/button1.png" alt="button1"><p class="textButton1">Type: Melee,  # of hits: 1, damage: 10</p></div>
-      <div id="button2"><img src="./assets/Quicksilver/button2.png" alt="button2"></div>
-      <div id="button3"><img src="./assets/Quicksilver/button3.png" alt="button3"></div>
-      <div id="button4"><img src="./assets/Quicksilver/button4.png" alt="button4"></div>
+      <div id="button1" class="button"><img src="./assets/Quicksilver/button1.png" alt="button1">
+        <p class="textButton">Type: Melee,  # of hits: 1, damage: 10</p>
       </div>
+      <div id="button2" class="button"><img src="./assets/Quicksilver/button2.png" alt="button2">
+        <p class="textButton">Type: Melee,  # of hits: 3, damage: 15</p>
+      </div>
+      <div id="button3" class="button"><img src="./assets/Quicksilver/button3.png" alt="button3">
+        <p class="textButton">Type: Melee,  # of hits: 1, damage: 30</p>
+      </div>
+      <div id="button4" class="button"><img src="./assets/Quicksilver/button4.png" alt="button4">
+        <p class="textButton">Type: Melee,  # of hits: 4, damage: 20</p>
+      </div>
+
+      </div> <!-- div for action bar closed -->
+      
       <!-- div for both health bar --> 
         <div style="position: absolute;
          display: flex;

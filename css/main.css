@@ -1,14 +1,14 @@
 
-#button1:hover{
+.button:hover{
     border: 2px solid yellow;
     transform:scale(1.1);
 }
 
-#button1:hover .textButton1{
+.button:hover .textButton{
     border: 2px solid yellow;
     visibility: visible;
 }
-.textButton1 {
+.textButton {
     position:absolute;
     top:-90px;
     left: 0;
@@ -19,4 +19,7 @@
     color:white;
     width: 90px;
     height:70px;
+}
+.hideButtons{
+    display:none;
 }
