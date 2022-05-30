@@ -7,6 +7,8 @@ const button1 = document.querySelector('#button1')
 const button2 = document.querySelector('#button2')
 const button3 = document.querySelector('#button3')
 const button4 = document.querySelector('#button4')
+const medikit = document.querySelector('#medikit')
+let message = document.querySelector('.message')
 
 canvas.width = 760
 canvas.height = 580
@@ -162,6 +164,10 @@ const enemy = new Fighter ({
         takeHit: {
             imageSrc: './assets/Dormammu/Take Hit.png',
             framesMax: 2,
+        },
+        death: {
+            imageSrc: './assets/Effect/fireEffect-idle.png',
+            framesMax: 2,
         }
     }
 })
@@ -172,17 +178,25 @@ function animate() {
     c.fillRect(0, 0, canvas.width, canvas.height)
     background.update()
     player.update()
+    if(!enemy.dead){
     enemy.update()
+    }
     enemyEffect.update()
     
     // player actions
 
     //preventing the player to spam the action script
+    if(!enemy.dead){
     buttons.addEventListener('click', (event)=>{
         buttons.classList.add("hideButtons")
     window.setTimeout(function(){
         buttons.classList.remove("hideButtons")
-    },2000);
+            },2000);
+        })
+    }
+    //healing item
+    medikit.addEventListener('click', (event)=>{
+        player.health20()
     })
     // button1
     button1.addEventListener('click', (event)=>{
@@ -196,6 +210,7 @@ function animate() {
         enemy.switchSprite('idle')
         player.switchSprite('idle')
         },600);
+        if(enemy.health > 10) {
     window.setTimeout(function(){
         enemy.enemyAttack2()
         enemyEffect.fireEffect()
@@ -206,6 +221,7 @@ function animate() {
         enemyEffect.switchSprite('idle')
         player.switchSprite('idle')
         },1700);
+    }
     })
     // button 2
     button2.addEventListener('click', (event)=>{
@@ -284,6 +300,19 @@ function animate() {
         enemyEffect.switchSprite('idle')
         },1600);
     })
+    if(enemy.health <= 0) {
+        enemy.dead = true;
+        message.innerHTML = 'VICTORY'
+        buttons.classList.add("hideButtons")
+        enemy.switchSprite('death')
+        window.setTimeout(function(){
+       window.location = 'mainPage.html';
+    },10000);
+    }
+    if(player.heal) {
+        player.heal = false
+        document.querySelector('#playerHealth').style.width = player.health + '%'
+    }
     if (player.attack) {
         enemy.hit10()
         player.attack = false 
@@ -293,8 +322,8 @@ function animate() {
         player.hit10()
         enemy.attack = false 
         document.querySelector('#playerHealth').style.width = enemy.health + '%'
-     }
-     
+    }
+    
   }
 //  //if player misses
 //  if (player.isAttacking && player.framesCurrent ===4) {

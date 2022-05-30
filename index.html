@@ -11,6 +11,7 @@
     <div style = "position: relative; display: inline-block">
     </div>
       <canvas></canvas>
+      <div class="message"></div>
       <!-- div for both health bar --> 
         <div style="position: absolute;
          display: flex;
@@ -42,10 +43,11 @@
       </div>
 
       <div class="button items"><img src="./assets/items/Inventory.png" alt="supplies">
-        <div id="itemSlot"><img src="./assets/items/medikit.png" alt="supplies"></div>
+        <div id="medikit"><img src="./assets/items/medikit.png" alt="heal"></div>
       </div>
 
       </div> <!-- div for action bar closed -->
+
      <!-- player health -->
      <div style="position: relative; height: 30px; width: 100%; display:flex; justify-content: flex-end">
      
@@ -62,20 +64,9 @@
       <div  id="enemyHealth" style="position:absolute; background: #ff3333;  border: 5px solid grey; top: 0; right: 0; bottom: 0; left: 0;">
       Dormammu</div>
     </div>
-      <div></div>
+     
     </div>
-    <div 
-    id="displayText"
-    style="position: absolute;
-     color:#fc8c03;
-       align-items: center;
-        justify-content: center;
-         top:0;
-          right:0;
-           bottom:0;
-            left:0;
-            display:none">Tie
-            </div>
+
     </div>
     <script src="js/utilis.js"></script>
 <script src="js/classes.js"></script>

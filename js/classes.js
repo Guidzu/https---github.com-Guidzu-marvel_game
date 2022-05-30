@@ -84,6 +84,7 @@ class Fighter extends Sprite{
         this.framesHold = 6
         this.sprites = sprites
         this.attack 
+        this.heal
         this.dead = false
 
         for (const sprite in this.sprites) {
@@ -92,16 +93,14 @@ class Fighter extends Sprite{
         }
     }
 
-
     update() {
         this.draw()
-        // if (!this.dead)
         this.animateFrames()
         
         // this.attackBox.position.x = this.position.x + this.attackBox.offset.x
         // this.attackBox.position.y = this.position.y + this.attackBox.offset.y
-    }
     
+    }
         attack1() {
             this.switchSprite('action1')
             this.attack = true
@@ -119,7 +118,9 @@ class Fighter extends Sprite{
         attack4() {
             this.switchSprite('action4')
                 }
-    
+        health20() {
+            this.health += 20 
+        }
         hit10() {
             this.health -= 10
             // // if (this.health <= 0){
@@ -154,6 +155,7 @@ class Fighter extends Sprite{
             this.switchSprite('cursedRings')
         }
         switchSprite(sprite) {
+           
     
         switch (sprite) {
             case 'idle':
@@ -236,4 +238,5 @@ class Fighter extends Sprite{
                 }
             
          }
-}
+        
+    }
