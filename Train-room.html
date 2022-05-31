@@ -1,0 +1,73 @@
+<link rel="stylesheet" href="./css/main.css">
+<head>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <!-- main container div -->
+    <div style = "position: relative; display: inline-block">
+    </div>
+      <canvas></canvas>
+      <div class="message"></div>
+      <!-- div for both health bar --> 
+        <div style="position: absolute;
+         display: flex;
+         left:12;
+          width: 760;
+           align-items: center;
+           top:589;
+           border: 5px solid #2f2f1e"> 
+            <!-- div for action bar -->
+      <div id="buttons" style="position: absolute;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      left:60px;
+      bottom:40;
+      ">
+  <!--buttons of action bar -->
+      <div id="button1" class="button"><img src="./assets/Quicksilver/button1.png" alt="button1">
+        <p class="textButton">Type: Melee,  # of hits: 1, damage: 10</p>
+      </div>
+      <div id="button2" class="button"><img src="./assets/Quicksilver/button2.png" alt="button2">
+        <p class="textButton">Type: Melee,  # of hits: 3, damage: 15</p>
+      </div>
+      <div id="button3" class="button"><img src="./assets/Quicksilver/button3.png" alt="button3">
+        <p class="textButton">Type: Melee,  # of hits: 1, damage: 30</p>
+      </div>
+      <div id="button4" class="button"><img src="./assets/Quicksilver/button4.png" alt="button4">
+        <p class="textButton">Type: Melee,  # of hits: 4, damage: 20</p>
+      </div>
+
+      <div class="button items"><img src="./assets/items/Inventory.png" alt="supplies">
+        <div id="medikit"><img src="./assets/items/medikit.png" alt="heal"></div>
+      </div>
+
+      </div> <!-- div for action bar closed -->
+
+     <!-- player health -->
+     <div style="position: relative; height: 30px; width: 100%; display:flex; justify-content: flex-end">
+     
+        <div style="background-color: grey; border: 1px solid grey;height: 30px; width: 100%"></div>
+  
+        <div  id="playerHealth" style="position:absolute; background: #ff3333;border: 5px solid grey;
+         top: 0; right: 0; bottom: 0; width:100%"></div>
+      </div>
+     <!-- enemy health -->
+    <div style="position: relative; height: 30px; width: 100%">
+
+      <div style="background-color: grey; border: 1px solid grey; height: 30px;"></div>
+
+      <div  id="enemyHealth" style="position:absolute; background: #ff3333;  border: 5px solid grey; top: 0; right: 0; bottom: 0; left: 0;">
+      Dormammu</div>
+    </div>
+     
+    </div>
+
+    </div>
+<script src="train/trainClasses.js"></script>
+<script src="train/train.js"></script>
+</body>
