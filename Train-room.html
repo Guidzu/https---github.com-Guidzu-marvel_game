@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="./css/dialogue.css">
 <link rel="stylesheet" href="./css/main.css">
 <head>
     <style>
@@ -11,6 +12,17 @@
     <div style = "position: relative; display: inline-block">
     </div>
       <canvas></canvas>
+
+      <div class="imgdialogue">
+        <img id="Fury" src='./assets/dialogue/Nick_Fury_Right.png'>
+        <!-- <img id="Mysterio" src="./assets/dialogue/Mysterio_Dialogue.png"> -->
+          <div class="dialogue">
+            <div class="name">NICK FURY</div>
+            <div class="text">Welcome home Agent, damn it's been so long !</div>
+          </div>
+          <button>OK</button>
+      </div>
+
       <div class="message"></div>
       <!-- div for both health bar --> 
         <div style="position: absolute;
@@ -23,7 +35,6 @@
             <!-- div for action bar -->
       <div id="buttons" style="position: absolute;
       display: flex;
-      width: 100%;
       align-items: center;
       left:60px;
       bottom:40;
@@ -62,7 +73,7 @@
       <div style="background-color: grey; border: 1px solid grey; height: 30px;"></div>
 
       <div  id="enemyHealth" style="position:absolute; background: #ff3333;  border: 5px solid grey; top: 0; right: 0; bottom: 0; left: 0;">
-      Dormammu</div>
+      Sentinel MK IV</div>
     </div>
      
     </div>

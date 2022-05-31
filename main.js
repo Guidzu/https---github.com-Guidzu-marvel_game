@@ -21,7 +21,7 @@ const background = new Sprite({
         x: 0,
         y:0
     },
-    imageSrc: './assets/lab.png'
+    imageSrc: './assets/hell.png'
 })
 
 const enemyEffect = new Fighter({
