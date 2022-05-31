@@ -132,7 +132,7 @@ class Fighter extends Sprite{
         }
         enemyAttack1() {
             this.attack = true
-            this.switchSprite('action3')
+            this.switchSprite('action1')
          }
         enemyAttack2() {
            this.attack = true
@@ -142,14 +142,18 @@ class Fighter extends Sprite{
             this.attack = true
             this.switchSprite('action3')
          }
+        enemyAttack4() {
+            this.attack = true
+            this.switchSprite('action4')
+        }
         buffEffect() {
             this.switchSprite('enforcement')
         }
         flame() {
             this.switchSprite('flame')
         }
-        darkProjections() {
-            this.switchSprite('darkProjection')
+        laser() {
+            this.switchSprite('laser')
         }
         darkRings() {
             this.switchSprite('cursedRings')
@@ -207,10 +211,10 @@ class Fighter extends Sprite{
                     this.framesCurrent = 0
                 }
                 break;
-            case 'darkProjection':
-                if (this.image !== this.sprites.darkProjection.image) {
-                    this.image = this.sprites.darkProjection.image
-                    this.framesMax = this.sprites.darkProjection.framesMax
+            case 'laser':
+                if (this.image !== this.sprites.laser.image) {
+                    this.image = this.sprites.laser.image
+                    this.framesMax = this.sprites.laser.framesMax
                     this.framesCurrent = 0
                 }
                 break;

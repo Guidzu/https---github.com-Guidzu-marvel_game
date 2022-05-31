@@ -54,9 +54,9 @@ const enemyEffect = new Fighter({
             imageSrc: './assets/Effect/Flame.png',
             framesMax: 4,
         },
-        darkProjection: {
-            imageSrc: './assets/Effect/Dark_Projection.png',
-            framesMax: 11,
+        laser: {
+            imageSrc: './assets/Effect/laser.png',
+            framesMax: 6,
         },
         cursedRings: {
             imageSrc: './assets/Effect/ringCurse.png',
@@ -150,8 +150,8 @@ const enemy = new Fighter ({
             framesMax: 4,
         },
         action1: {
-            imageSrc: './assets/Dormammu/attack1.png',
-            framesMax: 3,
+            imageSrc: './assets/Sentinels/Action1.png',
+            framesMax: 5,
         },
         action2: {
             imageSrc: './assets/Sentinels/Action2.png',
@@ -160,6 +160,10 @@ const enemy = new Fighter ({
         action3: {
             imageSrc: './assets/Sentinels/Action3.png',
             framesMax: 8,
+        },
+        action4: {
+            imageSrc: './assets/Sentinels/Action4.png',
+            framesMax: 6,
         },
         takeHit: {
             imageSrc: './assets/Sentinels/takeHit.png',
@@ -268,17 +272,29 @@ function animate() {
         player.switchSprite('idle')
     },700);
     window.setTimeout(function(){
-        enemy.enemyAttack2()
-        enemyEffect.position.x = 130
-        enemyEffect.darkProjections()
-        player.switchSprite('takeHit')
+        enemy.enemyAttack4()
         },1200);
     window.setTimeout(function(){
-        player.switchSprite('idle')
-        enemy.switchSprite('idle')
-        enemyEffect.position.x = 160
-        enemyEffect.switchSprite('idle')
+        enemy.position.x = 500
+        },1300);
+    window.setTimeout(function(){
+        enemy.position.x = 400
+        },1400);
+    window.setTimeout(function(){
+        enemy.position.x = 300
+        player.switchSprite('takeHit')
+        },1500);
+    window.setTimeout(function(){
+        enemy.position.x = 400
+        },1700);
+    window.setTimeout(function(){
+        enemy.position.x = 500
         },1800);
+    window.setTimeout(function(){
+        player.switchSprite('idle')
+        enemy.position.x = 600
+        enemy.switchSprite('idle')
+        },1900);
     })
     // button 4
     button4.addEventListener('click', (event)=>{
@@ -289,14 +305,16 @@ function animate() {
         player.position.x = 196
         enemy.switchSprite('idle')
         player.switchSprite('idle')
-    },600);
+        },600);
     window.setTimeout(function(){
-        enemy.enemyAttack3()
-        enemyEffect.position.x = 190
-        enemyEffect.position.y = 320
-        enemyEffect.darkRings()
-        player.switchSprite('takeHit')
+        enemy.enemyAttack1()
         },1000);
+    window.setTimeout(function(){
+        enemyEffect.position.x = 170
+        enemyEffect.position.y = 300
+        enemyEffect.laser()
+        player.switchSprite('takeHit')
+        },1200);
     window.setTimeout(function(){
         player.switchSprite('idle')
         enemy.switchSprite('idle')
