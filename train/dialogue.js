@@ -17,7 +17,7 @@ const imgdialogue = document.querySelector('.imgdialogue')
             },6000)
         window.setTimeout(function(){
             imgdialogue.classList.add('imgHidden')
-            },12000)
+            },15000)
     });
 
 

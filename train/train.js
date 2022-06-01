@@ -79,7 +79,7 @@ const player = new Fighter ({
     x: 0,
     y: 0
     },
-    imageSrc: './assets/Quicksilver/Idle.png',
+    imageSrc: './assets/Hawkeye/idle.png',
     scale: 1,
     framesMax: 4,
     offset: {
@@ -88,7 +88,7 @@ const player = new Fighter ({
     },
     sprites: {
         idle: {
-            imageSrc: './assets/Quicksilver/Idle.png',
+            imageSrc: './assets/Hawkeye/idle.png',
             framesMax: 4,
         },
         action1: {
@@ -108,7 +108,7 @@ const player = new Fighter ({
             framesMax: 6,
         },
         takeHit: {
-            imageSrc: './assets/Quicksilver/Take Hit.png',
+            imageSrc: './assets/Hawkeye/Take Hit.png',
             framesMax: 1,
         },
     },
@@ -275,21 +275,12 @@ function animate() {
         enemy.enemyAttack4()
         },1200);
     window.setTimeout(function(){
-        enemy.position.x = 500
-        },1300);
-    window.setTimeout(function(){
         enemy.position.x = 400
         },1400);
     window.setTimeout(function(){
         enemy.position.x = 300
         player.switchSprite('takeHit')
         },1500);
-    window.setTimeout(function(){
-        enemy.position.x = 400
-        },1700);
-    window.setTimeout(function(){
-        enemy.position.x = 500
-        },1800);
     window.setTimeout(function(){
         player.switchSprite('idle')
         enemy.position.x = 600
@@ -346,7 +337,6 @@ function animate() {
         enemy.attack = false 
         document.querySelector('#playerHealth').style.width = enemy.health + '%'
     }
-    
   }
 //  //if player misses
 //  if (player.isAttacking && player.framesCurrent ===4) {
