@@ -1,8 +1,11 @@
 .imgdialogue{
     position:absolute;
-    bottom:10em;
+    bottom:15em;
     margin-left:26em;
    
+}
+.imgHidden{
+    display:none
 }
 .dialogue{
     border: 3px solid blue;
@@ -14,19 +17,21 @@
     width:48rem;
 }
 .name{
+    position:absolute;
     font-weight:bolder;
     font-size:1.5em;
     margin-left:1em;
     margin-top:0.3em;
 }
 .text{
+    position:relative;
     color:rgb(160, 168, 236);
     font-weight:lighter;
     font-size:1.2em;
-    margin-left:-2em;
+    margin-left:1.5em;
     margin-top:2em;
 }
-button {
+.okButton {
     color:rgb(78, 78, 255);
     font-weight:bolder;
     border-radius:8%;
@@ -40,4 +45,7 @@ button {
 }
 button:hover {
     background-color:rgba(14, 23, 107, 0.884);
+}
+.Mysterio{
+    margin-left:-7em
 }

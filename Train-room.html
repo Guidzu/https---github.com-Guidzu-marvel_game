@@ -14,13 +14,14 @@
       <canvas></canvas>
 
       <div class="imgdialogue">
-        <img id="Fury" src='./assets/dialogue/Nick_Fury_Right.png'>
-        <!-- <img id="Mysterio" src="./assets/dialogue/Mysterio_Dialogue.png"> -->
+        <div class="img"><img class="Fury" src='./assets/dialogue/Nick_Fury_Right.png'>
+        <img class="Mysterio imgHidden" src="./assets/dialogue/Mysterio_Dialogue.png">
+        </div>
           <div class="dialogue">
             <div class="name">NICK FURY</div>
-            <div class="text">Welcome home Agent, damn it's been so long !</div>
+            <div class="text">Welcome home agent, damn it's been a while !</div>
           </div>
-          <button>OK</button>
+          <button class="okButton">OK</button>
       </div>
 
       <div class="message"></div>
@@ -70,15 +71,16 @@
      <!-- enemy health -->
     <div style="position: relative; height: 30px; width: 100%">
 
-      <div style="background-color: grey; border: 1px solid grey; height: 30px;"></div>
+      <div style="background-color: grey; border: 1px solid grey; height: 30px;"> Sentinel MK IV</div>
 
       <div  id="enemyHealth" style="position:absolute; background: #ff3333;  border: 5px solid grey; top: 0; right: 0; bottom: 0; left: 0;">
-      Sentinel MK IV</div>
+     </div>
     </div>
      
     </div>
 
     </div>
+<script src="train/dialogue.js"></script>
 <script src="train/trainClasses.js"></script>
 <script src="train/train.js"></script>
 </body>
