@@ -58,9 +58,9 @@ const enemyEffect = new Fighter({
             imageSrc: './assets/Effect/laser.png',
             framesMax: 6,
         },
-        cursedRings: {
-            imageSrc: './assets/Effect/ringCurse.png',
-            framesMax: 12,
+        Arrow: {
+            imageSrc: './assets/Effect/Arrow.png',
+            framesMax: 3,
         },
     }
 
@@ -92,12 +92,12 @@ const player = new Fighter ({
             framesMax: 4,
         },
         action1: {
-            imageSrc: './assets/Quicksilver/action1.png',
-            framesMax: 7,
+            imageSrc: './assets/Hawkeye/Action1.png',
+            framesMax: 8,
         },
         action2: {
-            imageSrc: './assets/Quicksilver/action2.png',
-            framesMax: 13,
+            imageSrc: './assets/Hawkeye/Action2.png',
+            framesMax: 7,
         },
         action3: {
             imageSrc: './assets/Quicksilver/action3.png',
@@ -204,42 +204,44 @@ function animate() {
     })
     // button1
     button1.addEventListener('click', (event)=>{
-        player.position.x = 550
         player.attack1()
     window.setTimeout(function(){
         enemy.switchSprite('takeHit')
-        },200);
+        enemyEffect.position.x = 500
+        enemyEffect.position.y = 370
+        enemyEffect.Arrowed()
+        },500);
     window.setTimeout(function(){
-        player.position.x = 196
+        enemyEffect.switchSprite('idle')
         enemy.switchSprite('idle')
         player.switchSprite('idle')
-        },600);
+        },700);
         if(enemy.health > 10) {
     window.setTimeout(function(){
         enemy.enemyAttack2()
         enemyEffect.position.x = 550
         enemyEffect.position.y = 220
         enemyEffect.buffEffect()
-        },1000);
+        },1200);
     window.setTimeout(function(){
         enemyEffect.position.x = 160
         enemyEffect.position.y = 270
         enemy.switchSprite('idle')
         enemyEffect.switchSprite('idle')
         player.switchSprite('idle')
-        },1500);
+        },1700);
     }
     })
     // button 2
     button2.addEventListener('click', (event)=>{
-        player.position.x = 700
-        enemy.switchSprite('takeHit')
         player.attack2()
     window.setTimeout(function(){
+        enemy.switchSprite('takeHit')
+        },500);
+    window.setTimeout(function(){
         enemy.switchSprite('idle')
-        player.position.x = 196
         player.switchSprite('idle')
-    },1200);
+        },1000);
     window.setTimeout(function(){
         enemy.enemyAttack3()
         },1400);

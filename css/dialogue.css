@@ -32,6 +32,8 @@
     margin-top:2em;
 }
 .okButton {
+    position:absolute;
+    z-index: 1;
     color:rgb(78, 78, 255);
     font-weight:bolder;
     border-radius:8%;

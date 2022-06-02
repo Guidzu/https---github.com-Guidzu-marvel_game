@@ -155,8 +155,8 @@ class Fighter extends Sprite{
         laser() {
             this.switchSprite('laser')
         }
-        darkRings() {
-            this.switchSprite('cursedRings')
+        Arrowed() {
+            this.switchSprite('Arrow')
         }
         switchSprite(sprite) {
            
@@ -218,10 +218,10 @@ class Fighter extends Sprite{
                     this.framesCurrent = 0
                 }
                 break;
-            case 'cursedRings':
-                if (this.image !== this.sprites.cursedRings.image) {
-                    this.image = this.sprites.cursedRings.image
-                    this.framesMax = this.sprites.cursedRings.framesMax
+            case 'Arrow':
+                if (this.image !== this.sprites.Arrow.image) {
+                    this.image = this.sprites.Arrow.image
+                    this.framesMax = this.sprites.Arrow.framesMax
                     this.framesCurrent = 0
                 }
                 break;  
