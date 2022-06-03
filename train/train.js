@@ -50,6 +50,14 @@ const enemyEffect = new Fighter({
             imageSrc: './assets/Effect/enforcement.png',
             framesMax: 5,
         },
+        explosion: {
+            imageSrc: './assets/Effect/explosion.png',
+            framesMax: 5,
+        },
+        targeted: {
+            imageSrc: './assets/Effect/Targeted.png',
+            framesMax: 4,
+        },
         flame: {
             imageSrc: './assets/Effect/Flame.png',
             framesMax: 4,
@@ -100,12 +108,8 @@ const player = new Fighter ({
             framesMax: 7,
         },
         action3: {
-            imageSrc: './assets/Quicksilver/action3.png',
-            framesMax: 7,
-        },
-        action4: {
-            imageSrc: './assets/Quicksilver/action4.png',
-            framesMax: 6,
+            imageSrc: './assets/Hawkeye/Action3.png',
+            framesMax: 4,
         },
         takeHit: {
             imageSrc: './assets/Hawkeye/Take Hit.png',
@@ -263,16 +267,20 @@ function animate() {
     })
     // button 3
     button3.addEventListener('click', (event)=>{
-        player.position.x = 550
-        player.attack3()
-        window.setTimeout(function(){
-            enemy.switchSprite('takeHit')
-        },300);
+        player.attack1()
+     window.setTimeout(function(){
+        enemy.switchSprite('takeHit')
+        enemyEffect.position.x = 550
+        enemyEffect.position.y = 320
+        enemyEffect.Explode()
+        },500);
     window.setTimeout(function(){
-        player.position.x = 196
+        enemyEffect.switchSprite('idle')
+        enemyEffect.position.x = 160
+        enemyEffect.position.y = 270
         enemy.switchSprite('idle')
         player.switchSprite('idle')
-    },700);
+        },800);
     window.setTimeout(function(){
         enemy.enemyAttack4()
         },1200);
@@ -291,14 +299,14 @@ function animate() {
     })
     // button 4
     button4.addEventListener('click', (event)=>{
-        player.position.x = 550
-        enemy.switchSprite('takeHit')
-        player.attack4()
+        player.attack3()
+        enemyEffect.position.x = 550
+        enemyEffect.position.y = 400
+        enemyEffect.Targeted()
     window.setTimeout(function(){
-        player.position.x = 196
-        enemy.switchSprite('idle')
         player.switchSprite('idle')
-        },600);
+        enemyEffect.switchSprite('idle')
+        },700);
     window.setTimeout(function(){
         enemy.enemyAttack1()
         },1000);

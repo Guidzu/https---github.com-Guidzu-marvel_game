@@ -158,6 +158,12 @@ class Fighter extends Sprite{
         Arrowed() {
             this.switchSprite('Arrow')
         }
+        Explode() {
+            this.switchSprite('explosion')
+        }
+        Targeted() {
+            this.switchSprite('targeted')
+        }
         switchSprite(sprite) {
            
     
@@ -222,6 +228,20 @@ class Fighter extends Sprite{
                 if (this.image !== this.sprites.Arrow.image) {
                     this.image = this.sprites.Arrow.image
                     this.framesMax = this.sprites.Arrow.framesMax
+                    this.framesCurrent = 0
+                }
+                break; 
+            case 'explosion':
+                 if (this.image !== this.sprites.explosion.image) {
+                    this.image = this.sprites.explosion.image
+                    this.framesMax = this.sprites.explosion.framesMax
+                    this.framesCurrent = 0
+                }
+                break; 
+            case 'targeted':
+                if (this.image !== this.sprites.targeted.image) {
+                    this.image = this.sprites.targeted.image
+                    this.framesMax = this.sprites.targeted.framesMax
                     this.framesCurrent = 0
                 }
                 break;  

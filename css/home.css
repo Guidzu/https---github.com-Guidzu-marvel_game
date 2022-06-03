@@ -1,0 +1,61 @@
+
+html{
+    background-color: rgb(17, 12, 12);
+}
+body{
+    margin-top:2em;
+}
+.background{
+    opacity: 0.2;
+    margin-left:22.5em;
+    border: 2px solid black;
+    background-size: cover;
+    height:34em;
+    width:48em;
+}
+.helicarrier{
+    margin-top:4.2em;
+    margin-left:-46em;
+    position: absolute;
+}
+.upperBar{
+    margin-left:-48em;
+    position: absolute;
+}
+.emptyMenu{
+    position:relative;
+    z-index:3;
+    background-repeat:no-repeat;
+    width:17em;
+    margin-top:-2em;
+    margin-left:23%;
+}
+.mainBar{
+    width:48em;
+}
+.missionBar{
+    position:absolute;
+    margin-top:-9.6em;
+    margin-left:28.8em;
+}
+.pvp{
+    position:absolute;
+    height:2.5em;
+    width:9em;
+    margin-top:-5.9em;
+    margin-left:29em;
+}
+.team{
+    position:absolute;
+    height:2.5em;
+    width:9em;
+    margin-top:-5.9em;
+    margin-left:38em;
+}
+.collection{
+    position:absolute;
+    height:2.2em;
+    width:9em;
+    margin-top:-3.2em;
+    margin-left:29em;
+}
