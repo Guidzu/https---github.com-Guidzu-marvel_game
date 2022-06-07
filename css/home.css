@@ -38,6 +38,10 @@ body{
     margin-top:-9.6em;
     margin-left:28.8em;
 }
+.onMouse:hover{
+   transform:scale(1.01);
+   opacity:0.8;
+}
 .pvp{
     position:absolute;
     height:2.5em;

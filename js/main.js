@@ -21,7 +21,7 @@ const background = new Sprite({
         x: 0,
         y:0
     },
-    imageSrc: './assets/hell.png'
+    imageSrc: '../assets/hell.png'
 })
 
 const enemyEffect = new Fighter({
@@ -34,7 +34,7 @@ const enemyEffect = new Fighter({
         x: 160,
         y:95
     },
-    imageSrc: './assets/Effect/fireEffect-idle.png',
+    imageSrc: '../assets/Effect/fireEffect-idle.png',
     scale: 1,
     framesMax: 4,
     offset: {
@@ -43,23 +43,23 @@ const enemyEffect = new Fighter({
     },
     sprites: {
         idle: {
-            imageSrc: './assets/Effect/fireEffect-idle.png',
+            imageSrc: '../assets/Effect/fireEffect-idle.png',
             framesMax: 1,
         },
         firePillar: {
-            imageSrc: './assets/Effect/Fire-Pillar.png',
+            imageSrc: '../assets/Effect/Fire-Pillar.png',
             framesMax: 18,
         },
         fireBall: {
-            imageSrc: './assets/Effect/Fire_Ball_to_Left.png',
+            imageSrc: '../assets/Effect/Fire_Ball_to_Left.png',
             framesMax: 4,
         },
         darkProjection: {
-            imageSrc: './assets/Effect/Dark_Projection.png',
+            imageSrc: '../assets/Effect/Dark_Projection.png',
             framesMax: 11,
         },
         cursedRings: {
-            imageSrc: './assets/Effect/ringCurse.png',
+            imageSrc: '../assets/Effect/ringCurse.png',
             framesMax: 12,
         },
     }
@@ -79,7 +79,7 @@ const player = new Fighter ({
     x: 0,
     y: 0
     },
-    imageSrc: './assets/Quicksilver/Idle.png',
+    imageSrc: '../assets/Quicksilver/Idle.png',
     scale: 1,
     framesMax: 4,
     offset: {
@@ -88,27 +88,27 @@ const player = new Fighter ({
     },
     sprites: {
         idle: {
-            imageSrc: './assets/Quicksilver/Idle.png',
+            imageSrc: '../assets/Quicksilver/Idle.png',
             framesMax: 4,
         },
         action1: {
-            imageSrc: './assets/Quicksilver/action1.png',
+            imageSrc: '../assets/Quicksilver/action1.png',
             framesMax: 7,
         },
         action2: {
-            imageSrc: './assets/Quicksilver/action2.png',
+            imageSrc: '../assets/Quicksilver/action2.png',
             framesMax: 13,
         },
         action3: {
-            imageSrc: './assets/Quicksilver/action3.png',
+            imageSrc: '../assets/Quicksilver/action3.png',
             framesMax: 7,
         },
         action4: {
-            imageSrc: './assets/Quicksilver/action4.png',
+            imageSrc: '../assets/Quicksilver/action4.png',
             framesMax: 6,
         },
         takeHit: {
-            imageSrc: './assets/Quicksilver/Take Hit.png',
+            imageSrc: '../assets/Quicksilver/Take Hit.png',
             framesMax: 1,
         },
     },
@@ -137,7 +137,7 @@ const enemy = new Fighter ({
     x: -50,
     y: 0
     },
-    imageSrc: './assets/Dormammu/Idle.png',
+    imageSrc: '../assets/Dormammu/Idle.png',
     scale: 1,
     framesMax: 8,
     offset: {
@@ -146,27 +146,27 @@ const enemy = new Fighter ({
     },
     sprites: {
         idle: {
-            imageSrc: './assets/Dormammu/Idle.png',
+            imageSrc: '../assets/Dormammu/Idle.png',
             framesMax: 8,
         },
         action1: {
-            imageSrc: './assets/Dormammu/attack1.png',
+            imageSrc: '../assets/Dormammu/attack1.png',
             framesMax: 3,
         },
         action2: {
-            imageSrc: './assets/Dormammu/attack2.png',
+            imageSrc: '../assets/Dormammu/attack2.png',
             framesMax: 6,
         },
         action3: {
-            imageSrc: './assets/Dormammu/attack3.png',
+            imageSrc: '../assets/Dormammu/attack3.png',
             framesMax: 5,
         },
         takeHit: {
-            imageSrc: './assets/Dormammu/Take Hit.png',
+            imageSrc: '../assets/Dormammu/Take Hit.png',
             framesMax: 2,
         },
         death: {
-            imageSrc: './assets/Effect/fireEffect-idle.png',
+            imageSrc: '../assets/Effect/fireEffect-idle.png',
             framesMax: 2,
         }
     }
