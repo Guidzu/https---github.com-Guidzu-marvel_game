@@ -24,7 +24,7 @@ body{
 }
 .emptyMenu{
     position:relative;
-    z-index:3;
+    z-index:2;
     background-repeat:no-repeat;
     width:17em;
     margin-top:-2em;

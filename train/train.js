@@ -21,7 +21,7 @@ const background = new Sprite({
         x: 0,
         y:0
     },
-    imageSrc: './assets/train-room.png'
+    imageSrc: '../assets/train-room.png'
 })
 
 const enemyEffect = new Fighter({
@@ -34,7 +34,7 @@ const enemyEffect = new Fighter({
         x: 160,
         y:95
     },
-    imageSrc: './assets/Effect/fireEffect-idle.png',
+    imageSrc: '../assets/Effect/fireEffect-idle.png',
     scale: 1,
     framesMax: 4,
     offset: {
@@ -43,31 +43,31 @@ const enemyEffect = new Fighter({
     },
     sprites: {
         idle: {
-            imageSrc: './assets/Effect/fireEffect-idle.png',
+            imageSrc: '../assets/Effect/fireEffect-idle.png',
             framesMax: 1,
         },
         enforcement: {
-            imageSrc: './assets/Effect/enforcement.png',
+            imageSrc: '../assets/Effect/enforcement.png',
             framesMax: 5,
         },
         explosion: {
-            imageSrc: './assets/Effect/explosion.png',
+            imageSrc: '../assets/Effect/explosion.png',
             framesMax: 5,
         },
         targeted: {
-            imageSrc: './assets/Effect/Targeted.png',
+            imageSrc: '../assets/Effect/Targeted.png',
             framesMax: 4,
         },
         flame: {
-            imageSrc: './assets/Effect/Flame.png',
+            imageSrc: '../assets/Effect/Flame.png',
             framesMax: 4,
         },
         laser: {
-            imageSrc: './assets/Effect/laser.png',
+            imageSrc: '../assets/Effect/laser.png',
             framesMax: 6,
         },
         Arrow: {
-            imageSrc: './assets/Effect/Arrow.png',
+            imageSrc: '../assets/Effect/Arrow.png',
             framesMax: 3,
         },
     }
@@ -87,7 +87,7 @@ const player = new Fighter ({
     x: 0,
     y: 0
     },
-    imageSrc: './assets/Hawkeye/idle.png',
+    imageSrc: '../assets/Hawkeye/idle.png',
     scale: 1,
     framesMax: 4,
     offset: {
@@ -96,23 +96,23 @@ const player = new Fighter ({
     },
     sprites: {
         idle: {
-            imageSrc: './assets/Hawkeye/idle.png',
+            imageSrc: '../assets/Hawkeye/idle.png',
             framesMax: 4,
         },
         action1: {
-            imageSrc: './assets/Hawkeye/Action1.png',
+            imageSrc: '../assets/Hawkeye/Action1.png',
             framesMax: 8,
         },
         action2: {
-            imageSrc: './assets/Hawkeye/Action2.png',
+            imageSrc: '../assets/Hawkeye/Action2.png',
             framesMax: 7,
         },
         action3: {
-            imageSrc: './assets/Hawkeye/Action3.png',
+            imageSrc: '../assets/Hawkeye/Action3.png',
             framesMax: 4,
         },
         takeHit: {
-            imageSrc: './assets/Hawkeye/Take Hit.png',
+            imageSrc: '../assets/Hawkeye/Take Hit.png',
             framesMax: 1,
         },
     },
@@ -141,7 +141,7 @@ const enemy = new Fighter ({
     x: -50,
     y: 0
     },
-    imageSrc: './assets/Sentinels/Sentinel_idle.png',
+    imageSrc: '../assets/Sentinels/Sentinel_idle.png',
     scale: 1,
     framesMax: 4,
     offset: {
@@ -150,31 +150,31 @@ const enemy = new Fighter ({
     },
     sprites: {
         idle: {
-            imageSrc: './assets/Sentinels/Sentinel_idle.png',
+            imageSrc: '../assets/Sentinels/Sentinel_idle.png',
             framesMax: 4,
         },
         action1: {
-            imageSrc: './assets/Sentinels/Action1.png',
+            imageSrc: '../assets/Sentinels/Action1.png',
             framesMax: 5,
         },
         action2: {
-            imageSrc: './assets/Sentinels/Action2.png',
+            imageSrc: '../assets/Sentinels/Action2.png',
             framesMax: 4,
         },
         action3: {
-            imageSrc: './assets/Sentinels/Action3.png',
+            imageSrc: '../assets/Sentinels/Action3.png',
             framesMax: 8,
         },
         action4: {
-            imageSrc: './assets/Sentinels/Action4.png',
+            imageSrc: '../assets/Sentinels/Action4.png',
             framesMax: 6,
         },
         takeHit: {
-            imageSrc: './assets/Sentinels/takeHit.png',
+            imageSrc: '../assets/Sentinels/takeHit.png',
             framesMax: 1,
         },
         death: {
-            imageSrc: './assets/Effect/fireEffect-idle.png',
+            imageSrc: '../assets/Effect/fireEffect-idle.png',
             framesMax: 2,
         }
     }
