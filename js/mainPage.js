@@ -1,18 +1,28 @@
 const collection = document.querySelector('.collection')
 const collections = document.querySelector('.collections')
 const collectionPage = document.querySelector('.collectionPage')
-const close = document.querySelector('.close')
+const close = document.querySelectorAll('.close')
 const lockboxBackground = document.querySelector('.lockboxBackground')
 const threeLockboxes = document.querySelector('.threeLockboxes')
 const viewCollection = document.querySelector('.textCollections')
 const openLockbox = document.querySelector('.textOpen')
+const team = document.querySelector('.team')
+const teamPage = document.querySelector('.teamPage')
 
 collection.addEventListener('click', (e)=>{
     collectionPage.classList.remove('hidden')
 })
-close.addEventListener('click', (e)=>{
-    collectionPage.classList.add('hidden')
+team.addEventListener('click', (e)=>{
+    teamPage.classList.remove('hidden')
 })
+for(let i=0; i<close.length; i++){
+    close[i].addEventListener('click', (e)=>{
+        collectionPage.classList.add('hidden');
+        teamPage.classList.add('hidden');
+    })
+}
+
+
 viewCollection.addEventListener('click', (e)=>{
     threeLockboxes.classList.add('hidden')
     collections.classList.remove('hidden')

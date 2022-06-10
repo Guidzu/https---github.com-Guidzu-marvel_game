@@ -1,0 +1,15 @@
+.teamPage{
+    border:1px solid green;
+    height:35.3em;
+    margin-top:-28.3em;
+    width:48em;
+    z-index:3;
+    margin-left:22.5em;
+    position:absolute;
+    }
+.teamBackground{
+    margin-top:-1em;
+    width:48em;
+    height:35em;
+
+}

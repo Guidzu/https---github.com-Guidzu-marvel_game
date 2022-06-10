@@ -13,7 +13,7 @@ height:38em;
 width:49em;
 }
 .hidden{
-    visibility: hidden;
+    display:none;
 }
 
 .close{
