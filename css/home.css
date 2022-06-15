@@ -14,6 +14,7 @@ body{
     width:48em;
 }
 .helicarrier{
+    z-index:2;
     margin-top:4.2em;
     margin-left:-46em;
     position: absolute;

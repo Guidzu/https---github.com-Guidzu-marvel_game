@@ -7,17 +7,77 @@
     <link rel="stylesheet" href="./css/home.css">
     <link rel="stylesheet" href="./css/collection.css">
     <link rel="stylesheet" href="./css/team.css">
+    <link rel="stylesheet" href="./css/cloud_artwork.css">
     <title>Document</title>
 </head>
 <body>
     <div>
         <img class="background" src="./assets/home/Empire_State_Building.png" alt="background">
         <img class="upperBar" src="./assets/home/upper_bar.png" alt="upperBar">
+
+        <!-- the clouds behind -->
+        <div class="cloudVisual"> <!--FIRST CLOUD--> 
+            <div class="firstCloud"> 
+                <div class="cloud" id="cloud-base"></div>
+                <div class="cloud" id="cloud-back"></div> 
+                <div class="cloud" id="cloud-mid"></div>
+                <div class="cloud" id="cloud-front"></div> 
+                <svg width="0" height="0"> <!--Top Layer-->
+                     <filter id="filter-base">
+                        <feTurbulence type="fractalNoise" baseFrequency="0.011" numOctaves="5" seed="8007" />
+                        <feDisplacementMap in="SourceGraphic" scale="120" />
+                     </filter>
+                     <filter id="filter-back"> 
+                        <feTurbulence type="fractalNoise" baseFrequency="0.011" numOctaves="3" seed="8007" />
+                        <feDisplacementMap in="SourceGraphic" scale="120" />
+                     </filter>
+                     <filter id="filter-mid">
+                         <feTurbulence type="fractalNoise" baseFrequency="0.011" numOctaves="3" seed="8007"/>
+                         <feDisplacementMap in="SourceGraphic" scale="120" /> 
+                     </filter>
+                     <filter id="filter-front">
+                         <feTurbulence type="fractalNoise" baseFrequency="0.009" numOctaves="4" seed="8007"/>
+                         <feDisplacementMap in="SourceGraphic" scale="50" /> 
+                     </filter> 
+                </svg> 
+            </div> 
+            <!--SECOND CLOUD--> 
+            <div class="secondCloud">
+                 <div class="cloud" id="cloud-base"></div>
+                 <div class="cloud" id="cloud-back"></div> 
+                 <div class="cloud" id="cloud-mid"></div> 
+                 <div class="cloud" id="cloud-front"></div> 
+                 <svg width="0" height="0"> <!--Top Layer--> 
+                    <filter id="filter-base"> 
+                        <feTurbulence type="fractalNoise" baseFrequency="0.011" numOctaves="5" seed="8007" /> 
+                        <feDisplacementMap in="SourceGraphic" scale="120" /> 
+                    </filter> <filter id="filter-back"> 
+                        <feTurbulence type="fractalNoise" baseFrequency="0.011" numOctaves="3" seed="8007" />
+                        <feDisplacementMap in="SourceGraphic" scale="120" /> 
+                    </filter> 
+                    <filter id="filter-mid"> 
+                        <feTurbulence type="fractalNoise" baseFrequency="0.011" numOctaves="3" seed="8007"/> 
+                        <feDisplacementMap in="SourceGraphic" scale="120" /> 
+                    </filter> 
+                    <filter id="filter-front"> 
+                        <feTurbulence type="fractalNoise" baseFrequency="0.009" numOctaves="4" seed="8007"/> 
+                        <feDisplacementMap in="SourceGraphic" scale="50" /> 
+                    </filter> 
+                </svg> 
+            </div> 
+            <div class="content"> 
+                <div class="cloud_artwork"></div> 
+            </div> 
+            <div class="bottom"></div>
+        </div>
+        <!-- cloudVisual closed -->
+
         <img class="helicarrier" src="./assets/home/Helicarrier.png" alt="Helicarrier">
 
  <!-- TEAM SIDE -->
         <div class="teamPage hidden">
             <button class="close">X</button>
+           
             <img class="teamBackground" src="./assets/team/team_page.png" alt="team page">
         </div>
 
